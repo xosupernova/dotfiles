@@ -33,6 +33,7 @@ alias gp="git push"                          # Push changes to remote
 # SSH & Dotfiles:
 alias copypub="cat ~/.ssh/id_ed25519.pub | wl-copy" # Copy public key to clipboard (Wayland)
 alias dots="git -C ~/.dotfiles"              # Manage dotfiles repo from anywhere
+alias dotedit="code ~/.dotfiles"        # Edit dotfiles via vscodium
 alias dotpush="git -C ~/.dotfiles push"      # Push dotfile changes to remote
 
 # Safety: Prevent accidental deletions or overwrites

@@ -1,12 +1,26 @@
-name: ShellCheck
+name: Linting
 on: [push, pull_request]
 
 jobs:
   shellcheck:
+    name: ShellCheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@master
         with:
-          scandir: './zsh'
+          check_all_files: true
+          ignore_paths: .git
+
+  biome:
+    name: Biome CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+      - name: Run Biome
+        run: biome ci .

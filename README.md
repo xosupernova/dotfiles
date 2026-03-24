@@ -1,21 +1,40 @@
-# 🚀 xo_supernova Dotfiles
+# 🚀 xo_supernova // Dotfiles
 
-Modular Zsh configuration optimized for **CachyOS**, **Kitty**, and **Konsole**.
+![Shell](https://img.shields.io/badge/shell-zsh-brightgreen.svg)
+![OS](https://img.shields.io/badge/os-CachyOS-blue.svg)
+![Prompt](https://img.shields.io/badge/prompt-starship-orange.svg)
 
-## 📂 Structure
-- `zshrc`: Main entry point.
-- `zsh/paths.zsh`: Clean PATH management via `typeset -U`.
-- `zsh/aliases.zsh`: Shortcuts for Git, System, and Power Tools.
-- `zsh/init.zsh`: Mise, Zoxide, and Starship initialization.
-- `fastfetch/`: Separate configs for different terminal emulators.
+Modular Zsh configuration optimized for **CachyOS**. Designed for speed, organized for sanity.
+
+---
+
+## 📂 Architecture
+
+* **[`.github/`](./.github/)**: GitHub actions, workflows, and [extended documentation](./.github/docs/).
+* **[`zsh/`](./zsh/)**: Core logic including [`zshrc`](./zsh/zshrc), [`aliases.zsh`](./zsh/aliases.zsh), and [`paths.zsh`](./zsh/paths.zsh).
+* **[`fastfetch/`](./fastfetch/)**: Visual configurations for [Kitty](./fastfetch/kitty.jsonc) and [Konsole](./fastfetch/konsole.jsonc).
+* **[`ZSH.md`](./.github/docs/ZSH.md)**: 💡 **Full Alias & Workflow Cheatsheet.**
+
+---
 
 ## 🛠️ Installation
-1. Clone to `~/.dotfiles`.
-2. Run `./install.sh`.
-3. Restart terminal.
 
-## ⌨️ Key Aliases
-- `update`: Full system upgrade.
-- `dots`: Manage this repository.
-- `reload`: Refresh shell config.
-- `copypub`: Copy SSH key to clipboard.
+```zsh
+git clone git@github.com:YOUR_USERNAME/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+chmod +x install.sh
+./install.sh
+reload
+```
+
+## ⌨️ Quick-Link Aliases
+
+| Command | Action |
+| ----------- | ----------- |
+| `update` | Full system upgrade (Pacman -Syu) |
+| `dots` | Direct access to this git repo |
+| `zconf` | Quickly edit the main Zsh config |
+| `copypub` | Copies SSH Public Key to clipboard |
+| `copypub` | FInstantly apply changes to the shell |
+
+**Note:** Requires [Nerd Fonts](https://www.nerdfonts.com/) for Starship icons to render correctly.

@@ -8,7 +8,7 @@ alias code="vsc"                             # Standard 'code' command shortcut
 
 # System Updates: Sync repositories, upgrade packages, and clean cache
 alias update="sudo pacman -Syu"              # Full system upgrade
-alias paclean="sudo pacman -Sc"              # Clear old package cache to save disk space
+alias paclean="sudo rm -fr /var/cache/pacman/pkg/download-* && sudo pacman -Sc"   # Clear old package cache to save disk space and remove stuck downloads
 
 # Modern CLI Replacements:
 alias cat="bat"                              # Better 'cat' with syntax highlighting

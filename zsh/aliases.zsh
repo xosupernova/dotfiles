@@ -24,6 +24,7 @@ alias icat="kitty +kitten icat"              # View images directly in Kitty ter
 alias kssh="kitty +kitten ssh"               # SSH that maintains Kitty terminfo
 alias kprofile="konsole --profile"           # Launch Konsole with a specific profile
 alias kedit="nano ~/.local/share/konsole/*.profile" # Fast edit for Konsole profiles
+alias fetch="zsh ~/.dotfiles/fastfetch/fetch_spotify.sh"
 
 # Git Shortcuts:
 alias gs="git status"                        # Check current branch status

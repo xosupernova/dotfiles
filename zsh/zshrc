@@ -32,12 +32,4 @@ load_config "$HOME/.zsh/init.zsh"     # External Tool Initializations
 # POST-INIT: Commands that run every time you open a terminal
 # ------------------------------------------------------------------------------
 
-# Terminal-specific visual welcome (Separate configs for Kitty vs Konsole)
-if [[ "$TERM" == "xterm-kitty" ]]; then
-    fastfetch --config ~/.dotfiles/fastfetch/kitty.jsonc
-elif [[ -n "$KONSOLE_VERSION" ]]; then
-    fastfetch --config ~/.dotfiles/fastfetch/konsole.jsonc
-else
-    # Fallback for generic terminals
-    fastfetch
-fi
+[[ -f ~/.dotfiles/fastfetch/fetch_spotify.sh ]] && zsh ~/.dotfiles/fastfetch/fetch_spotify.sh
